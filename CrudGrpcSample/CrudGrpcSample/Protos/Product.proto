@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option csharp_namespace = "CrudGrpcSample.Protos";
+
+service ProductService{
+	rpc AddProduct(AddProductRequest) returns (AddProductResponse);
+}
+
+message AddProductRequest{
+	string Name = 1;
+	int32 Price = 2;
+
+}message AddProductResponse{
+	bool IsSuccess = 1;
+}
